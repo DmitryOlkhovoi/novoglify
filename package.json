@@ -23,8 +23,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "PUBLIC_URL=novoglify npm run build",
+    "deploy": "PUBLIC_URL=novoglify gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

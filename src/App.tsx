@@ -45,8 +45,10 @@ function App() {
       const points: xy[] = [];
 
       word.split("").forEach((v) => {
-        if (keysMap.has(v)) {
-          const [x, y] = keysMap.get(v)!;
+        const vl = v.toLowerCase();
+
+        if (keysMap.has(vl)) {
+          const [x, y] = keysMap.get(vl)!;
           points.push({ x: x, y: y });
         }
       });
