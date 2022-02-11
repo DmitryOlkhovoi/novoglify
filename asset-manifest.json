@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/novoglify/static/css/main.eeccd1f2.css",
-    "main.js": "/novoglify/static/js/main.c55a6e0b.js",
-    "static/js/787.fa86226e.chunk.js": "/novoglify/static/js/787.fa86226e.chunk.js",
-    "index.html": "/novoglify/index.html",
-    "main.eeccd1f2.css.map": "/novoglify/static/css/main.eeccd1f2.css.map",
-    "main.c55a6e0b.js.map": "/novoglify/static/js/main.c55a6e0b.js.map",
-    "787.fa86226e.chunk.js.map": "/novoglify/static/js/787.fa86226e.chunk.js.map"
+    "main.css": "novoglify/static/css/main.eeccd1f2.css",
+    "main.js": "novoglify/static/js/main.0744b63d.js",
+    "static/js/787.fa86226e.chunk.js": "novoglify/static/js/787.fa86226e.chunk.js",
+    "index.html": "novoglify/index.html",
+    "main.eeccd1f2.css.map": "novoglify/static/css/main.eeccd1f2.css.map",
+    "main.0744b63d.js.map": "novoglify/static/js/main.0744b63d.js.map",
+    "787.fa86226e.chunk.js.map": "novoglify/static/js/787.fa86226e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eeccd1f2.css",
-    "static/js/main.c55a6e0b.js"
+    "static/js/main.0744b63d.js"
   ]
 }
