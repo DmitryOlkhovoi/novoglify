@@ -77,6 +77,7 @@ function App() {
   return (
     <Wrapper>
       <TextareaAutosize
+        placeholder="Писать тут"
         minRows={10}
         value={value}
         onChange={(e) => setValue(e.currentTarget.value)}
