@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { RGBColor, SketchPicker } from "react-color";
 import tw from "tailwind-styled-components";
 import TextareaAutosize from "react-textarea-autosize";
 import * as d3 from "d3";
@@ -12,19 +13,27 @@ interface xy {
 
 const keysMap = getAlphabetMap();
 
-let Wrapper: any = styled.div`
-  textarea {
-    flex: 1;
-    height: 100px;
-  }
-
-  div {
-    flex: 1;
-  }
+const Wrapper = tw.div`
+  flex
 `;
 
-Wrapper = tw(Wrapper)`
-  flex
+const Textarea = tw(TextareaAutosize)`
+  w-full
+  border-2
+  p-1
+`;
+
+const SVGWrapper = tw.div`
+  flex-1
+  p-1
+  border-2
+  mr-2
+`;
+
+const ToolsWrapper = tw.div`
+  border-2
+  p-2
+  h-full
 `;
 
 const SVG = tw.svg`
@@ -35,8 +44,15 @@ const SVG = tw.svg`
   h-1
 `;
 
+function rgbToString(rgb: RGBColor) {
+  const { r, g, b, a } = rgb;
+
+  return `rgba(${r}, ${g}, ${b}, ${a})`;
+}
+
 function App() {
   const [value, setValue] = useState("");
+  const [color, setColor] = useState("#000000");
 
   const renderGlyphs = () => {
     const paths: JSX.Element[] = [];
@@ -61,12 +77,7 @@ function App() {
 
       paths.push(
         <SVG>
-          <path
-            stroke="rgb(52 52 52 / 50%)"
-            fill="none"
-            stroke-width="3"
-            d={d || ""}
-          />
+          <path stroke={color} fill="none" stroke-width="3" d={d || ""} />
         </SVG>
       );
     });
@@ -75,15 +86,23 @@ function App() {
   };
 
   return (
-    <Wrapper>
-      <TextareaAutosize
+    <>
+      <Textarea
         placeholder="Писать тут"
-        minRows={10}
+        minRows={3}
         value={value}
         onChange={(e) => setValue(e.currentTarget.value)}
       />
-      <div>{renderGlyphs()}</div>
-    </Wrapper>
+      <Wrapper>
+        <SVGWrapper>{renderGlyphs()}</SVGWrapper>
+        <ToolsWrapper>
+          <SketchPicker
+            color={color}
+            onChange={(color) => setColor(rgbToString(color.rgb))}
+          ></SketchPicker>
+        </ToolsWrapper>
+      </Wrapper>
+    </>
   );
 }
 
