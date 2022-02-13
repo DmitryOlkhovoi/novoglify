@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/novoglify/static/css/main.eeccd1f2.css",
-    "main.js": "/novoglify/static/js/main.b05ad1b8.js",
+    "main.css": "/novoglify/static/css/main.5984cca1.css",
+    "main.js": "/novoglify/static/js/main.72f67b80.js",
     "static/js/787.fa86226e.chunk.js": "/novoglify/static/js/787.fa86226e.chunk.js",
     "index.html": "/novoglify/index.html",
-    "main.eeccd1f2.css.map": "/novoglify/static/css/main.eeccd1f2.css.map",
-    "main.b05ad1b8.js.map": "/novoglify/static/js/main.b05ad1b8.js.map",
+    "main.5984cca1.css.map": "/novoglify/static/css/main.5984cca1.css.map",
+    "main.72f67b80.js.map": "/novoglify/static/js/main.72f67b80.js.map",
     "787.fa86226e.chunk.js.map": "/novoglify/static/js/787.fa86226e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eeccd1f2.css",
-    "static/js/main.b05ad1b8.js"
+    "static/css/main.5984cca1.css",
+    "static/js/main.72f67b80.js"
   ]
 }
